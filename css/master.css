@@ -1,0 +1,118 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  color: #777;
+}
+
+.navbar {
+  background-color: #FFC107;
+}
+
+/* Content Sections */
+.section-header {
+  text-align: center;
+}
+
+.section-content {
+  position: relative;
+}
+
+.about-me {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.education {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+
+.research {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+
+}
+
+.publications-and-talks {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+
+.contact-info {
+  color: #ddd;
+  background-color: #282E34;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: center;
+}
+
+/* Images */
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.main {
+  background-color: black;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.caption span.border {
+  background-color: transparent;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.debbie-einstein-photo, .uk-photo, .horizons-photo, .debbie-talk-photo, .team-photo {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.debbie-einstein-photo {
+  background-image: url("../images/debbieAndEinstein.jpg");
+  min-height: 100%;
+}
+
+.uk-photo {
+  background-image: url("../images/memorialHallFall.jpg");
+  min-height: 600px;
+}
+
+.horizons-photo {
+  background-image: url("../images/apparentHorizons.png");
+  min-height: 400px;
+}
+
+.debbie-talk-photo {
+  background-image: url("../images/debbieGivingTalkAtGRAM.jpg");
+  min-height: 500px;
+}
+
+.team-photo {
+  background-image: url("../images/debbieAndTeamAndEinstein.jpg");
+  min-height: 500px;
+}
