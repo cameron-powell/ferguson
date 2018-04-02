@@ -9,6 +9,16 @@ body, html {
 }
 
 /* Content Sections */
+.black-card {
+  background-color: black;
+}
+
+.main-card {
+  letter-spacing: 10px;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
 .section-header {
   text-align: center;
 }
