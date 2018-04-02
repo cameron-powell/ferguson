@@ -19,6 +19,13 @@ body, html {
   padding-top: 10px;
 }
 
+.section-card {
+  letter-spacing: 10px;
+  font-size: 25px;
+  padding-top: 10px;
+  background-color: transparent;
+}
+
 .section-header {
   text-align: center;
 }
