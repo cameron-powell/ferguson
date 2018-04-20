@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/master.css">
 
     <title>Ferguson</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -19,15 +23,13 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pubsAndTalks">Publications/Talks</a></li>
-          <!--<li class="nav-item"><a class="nav-link" href="#">Teaching</a></li>-->
-          <!--<li class="nav-item"><a class="nav-link" href="#">Awards</a></li>-->
+          <li class="nav-item"><a id="about-link" class="nav-link">About</a></li>
+          <li class="nav-item"><a id="education-link" class="nav-link">Education</a></li>
+          <li class="nav-item"><a id="research-link" class="nav-link">Research</a></li>
+          <li class="nav-item"><a id="pubs-talks-link" class="nav-link">Publications/Talks</a></li>
           <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
           <li class="nav-item"><a class="nav-link" href="assets/resume.pdf">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contactInfo">Contact</a></li>
+          <li class="nav-item"><a id="contact-link" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -48,7 +50,7 @@
 <!--ABOUT ME-->
     <div class="section-content">
       <div class="about-me">
-        <a id="about"></a>
+        <a name="about"></a>
         <p>I am a PhD student in the Center for Relativistic Astrophysics at the
         Georgia Institute of Technology.  I obtained my B.S. in Physics from the
         University of Kentucky with minors in Computer Science and Mathematics
@@ -63,7 +65,7 @@
     </div>
 
 <!--EDUCATION-->
-    <a id="education"></a>
+    <a name="education"></a>
     <div class="uk-photo">
       <div class="caption">
         <div class="row">
@@ -85,7 +87,7 @@
     </div>
 
 <!--RESEARCH-->
-    <a id="research"></a>
+    <a name="research"></a>
     <div class="horizons-photo">
       <div class="caption">
         <div class="row">
@@ -134,7 +136,7 @@
     </div>
 
 <!--PUBLICATIONS/TALKS-->
-    <a id="pubsAndTalks"></a>
+    <a name="pubs-talks"></a>
     <div class="debbie-talk-photo">
       <div class="caption">
         <div class="row">
@@ -173,7 +175,7 @@
 
     <div class="section-content">
       <div class="contact-info">
-        <a id="contactInfo"></a>
+        <a name="contact"></a>
         <h3 class="section-header">Contact</h3>
         <address>
           <strong>Georgia Institute of Technology - School of Physics</strong><br>
@@ -191,8 +193,33 @@
       <a href="#pubsAndTalks" style="color:white">Upcoming Talk</a>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+      function scrollToAnchor(anchor_id) {
+        var anchor = $("a[name='"+anchor_id+"']");
+        $('html,body').animate({scrollTop: anchor.offset().top}, 'slow');
+      }
+
+      $("#about-link").click(function() {
+        scrollToAnchor('about');
+      });
+
+      $("#education-link").click(function() {
+        scrollToAnchor('education');
+      });
+
+      $("#research-link").click(function() {
+        scrollToAnchor('research');
+      });
+
+      $("#pubs-talks-link").click(function() {
+        scrollToAnchor('pubs-talks');
+      });
+
+      $("#contact-link").click(function() {
+        scrollToAnchor('contact');
+      });
+    </script>
   </body>
 </html>
